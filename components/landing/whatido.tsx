@@ -77,7 +77,7 @@ export default function WhatIDo() {
                     {/* Motion & Interaction Card */}
                     <div className="bg-gradient-to-br from-[#F5D6B8] to-[#E8B88A] rounded-[2rem] p-8 flex flex-col justify-between min-h-[400px] shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out">
                         {/* Card Visual - Circular Gradient */}
-                        <div className="rounded-[1.5rem] mb-6  flex items-center justify-center min-h-[300px] overflow-hidden relative">
+                        <div className="rounded-[1.5rem] mb-6 flex items-center justify-center min-h-[300px] overflow-hidden relative">
                             <Image src={haha} alt="haha" fill className="object-cover" />
                         </div>
 
