@@ -3,8 +3,8 @@
 import { TextAnimate } from "../ui/text-animate"
 import { SiFigma, SiFramer, SiPinterest, SiDribbble, SiNextdotjs, SiJavascript, SiReact, SiHtml5, SiCss3, SiThreedotjs, SiWebgl } from 'react-icons/si'
 import { TbWorld } from 'react-icons/tb'
-import design from "@/public/images/design.png"
-import dev from "@/public/images/dev.png"
+import design from "@/public/images/design.webp"
+import dev from "@/public/images/dev.webp"
 import Image from "next/image"
 import LightGlass from "../ui/light-glass"
 import AutumnBreeze from "../ui/autmn-breeze"

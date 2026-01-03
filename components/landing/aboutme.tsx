@@ -2,7 +2,7 @@
 
 import { TextAnimate } from "../ui/text-animate"
 import Image from "next/image"
-import me from "../../public/images/me.png"
+import me from "../../public/images/me.webp"
 
 export default function AboutMe() {
     return (

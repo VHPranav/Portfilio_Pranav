@@ -14,6 +14,7 @@ interface TextAnimateProps {
     delay?: number
     staggerDelay?: number
     as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div"
+    onClick?: () => void
 }
 
 const animationVariants = {
@@ -47,6 +48,7 @@ export function TextAnimate({
     delay = 0,
     staggerDelay = 0.05,
     as: Component = "div",
+    onClick,
 }: TextAnimateProps) {
     const [ref, isInView] = useInView({ triggerOnce: true, rootMargin: "-100px" })
 
@@ -82,7 +84,7 @@ export function TextAnimate({
     const parts = splitText()
 
     return (
-        <Component ref={ref} className={className}>
+        <Component ref={ref} className={className} onClick={onClick}>
             {parts.map((part, index) => (
                 <span key={index} className="inline-block">
                     <span

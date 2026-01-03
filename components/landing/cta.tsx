@@ -1,14 +1,30 @@
 "use client"
 
-import Link from "next/link"
+import { useState } from "react"
 import { TextAnimate } from "../ui/text-animate"
 import AutumnBreeze from "../ui/autmn-breeze"
+import LeafBurst from "../ui/leaf-burst"
+import { useRouter } from "next/navigation"
 
 export default function CTA() {
+    const [isExploding, setIsExploding] = useState(false)
+    const router = useRouter()
+
+    const handleGetInTouch = () => {
+        setIsExploding(true)
+        setTimeout(() => {
+            window.open("https://calendly.com/pranavvh778/portfolio", "_blank")
+            setIsExploding(false)
+        }, 500) // 2.5s delay for animation
+    }
+
     return (
         <section className="w-full py-32 px-6 relative overflow-hidden ">
             {/* Background Effect */}
             <AutumnBreeze />
+
+            {/* Burst Effect */}
+            {isExploding && <LeafBurst />}
 
             <div className="max-w-5xl mx-auto flex flex-col items-center justify-center text-center relative z-10">
                 <TextAnimate
@@ -28,15 +44,11 @@ export default function CTA() {
                     Discover how we could work together :)
                 </TextAnimate>
 
-                <Link
-                    href="https://calendly.com/pranavvh778/portfolio"
-                    target="_blank"
-                    className="relative group cursor-pointer"
-                >
+                <div className="relative group cursor-pointer" onClick={handleGetInTouch}>
                     <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-black flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
                         <span className="text-white text-lg font-medium">Get in touch</span>
                     </div>
-                </Link>
+                </div>
             </div>
         </section>
     )

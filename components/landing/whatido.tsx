@@ -3,7 +3,7 @@
 import { AnimatedText } from "@/components/ui/animated-text";
 import WaveParticles from "@/components/ui/wave-particles";
 import Image from "next/image";
-import haha from "../../public/images/haha.png"
+import haha from "../../public/images/haha.webp"
 
 export default function WhatIDo() {
     return (

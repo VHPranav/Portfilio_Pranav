@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import { AnimatedText } from "@/components/ui/animated-text";
-import alpha from "../../public/images/alpha.webp"
-import clockhash from "../../public/images/clockhash.webp"
-
+import alpha from "../../public/images/alphaweb.webp"
+import clockhash from "../../public/images/clckweb.webp"
 export default function Latest() {
     const projects = [
         {

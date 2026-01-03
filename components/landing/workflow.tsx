@@ -1,9 +1,9 @@
 "use client"
-import one from "../../public/images/one.png"
-import two from "../../public/images/two.png"
-import three from "../../public/images/three.png"
-import four from "../../public/images/four.png"
-import five from "../../public/images/five.png"
+import one from "../../public/images/one.webp"
+import two from "../../public/images/two.webp"
+import three from "../../public/images/three.webp"
+import four from "../../public/images/four.webp"
+import five from "../../public/images/five.webp"
 import Image from "next/image"
 import { AnimatedText } from "../ui/animated-text"
 
@@ -69,7 +69,7 @@ export default function Workflow() {
                                 } ${index === 4 ? 'lg:col-start-4' : ''}`}
                         >
                             {/* Image */}
-                            <div className="mb-6 rounded-2xl overflow-hidden aspect-[16/9] relative">
+                            <div className="mb-6 rounded-2xl overflow-hidden aspect-[16/9] relative z-20">
                                 <Image
                                     src={step.imagePlaceholder}
                                     alt={step.title}
