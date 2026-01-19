@@ -1,6 +1,8 @@
 "use client";
 
 import { AnimatedText } from "@/components/ui/animated-text";
+import { IoArrowForward } from "react-icons/io5";
+import Link from "next/link";
 import one from "../../../public/images/clckportftwo.webp";
 import two from "../../../public/images/alph.webp";
 import three from "../../../public/images/twrwtch.webp";
@@ -16,37 +18,42 @@ export default function CaseStudies() {
             title: "Clockhash Webpage",
             category: "Web Design / Branding",
             image: one,
+            link: "/work/design/clockhash",
         },
         {
             id: 2,
             title: "AlphaInterface",
             category: "SaaS Dashboard",
             image: two,
-
+            link: "/work/design/alphainterface",
         },
         {
             id: 3,
             title: "Towerwatch",
             category: "Monitoring Platform",
             image: three,
+            link: "/work/design/towerwatch",
         },
         {
             id: 4,
             title: "Velocegrade",
             category: "SaaS Dashboard",
             image: four,
+            link: "/work/design/velocegrade",
         },
         {
             id: 5,
             title: "Portfolio Page",
             category: "Portfolio Design",
             image: five,
+            link: "/work/design/portfolio",
         },
         {
             id: 6,
             title: "Marketing Page",
             category: "Landing Page",
             image: six,
+            link: "/work/design/marketing",
         },
     ];
 
@@ -75,7 +82,7 @@ export default function CaseStudies() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
                     {cases.map((item) => (
-                        <div key={item.id} className="group cursor-pointer">
+                        <Link href={item.link || "#"} key={item.id} className="group cursor-pointer block">
                             {/* Image Container */}
                             <div className="relative aspect-[16/7] bg-gray-100 rounded-2xl overflow-hidden mb-6">
                                 <div className="absolute inset-0 bg-gray-200 animate-pulse" />
@@ -96,12 +103,15 @@ export default function CaseStudies() {
                                     <p className="text-[#9B9B9B] text-base">
                                         {item.category}
                                     </p>
-                                    {/* <button className="px-4 py-2 text-sm font-medium text-[#9B9B9B] hover:text-[#222224] cursor-pointer">
+                                </div>
+                                <div className="flex items-center justify-between mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    <span className="text-[#222224] text-base font-medium border-b border-[#222224]">
                                         View Case Study
-                                    </button> */}
+                                    </span>
+                                    <IoArrowForward className="w-5 h-5 text-[#222224] transition-transform duration-300 group-hover:translate-x-2" />
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
