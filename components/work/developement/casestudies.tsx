@@ -51,7 +51,7 @@ export default function CaseStudies() {
     ];
 
     return (
-        <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-[#FCFBF8]">
+        <section className="w-full py-24 px-6 md:px-12 lg:px-20 relative z-10">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-10">
                     <AnimatedText className="text-4xl md:text-5xl font-medium text-[#222224] mb-3">

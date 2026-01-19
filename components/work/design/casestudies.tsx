@@ -58,7 +58,7 @@ export default function CaseStudies() {
     ];
 
     return (
-        <section className="w-full py-24 px-6 md:px-12 lg:px-20 bg-[#FCFBF8]">
+        <section className="w-full py-24 px-6 md:px-12 lg:px-20 relative z-10">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-10">
                     <AnimatedText className="text-4xl md:text-5xl font-medium text-[#222224] mb-3">
@@ -96,11 +96,11 @@ export default function CaseStudies() {
 
                             {/* Content */}
                             <div className="flex flex-col">
-                                <h3 className="text-2xl font-medium text-[#222224] group-hover:text-[#6B6B6B] transition-colors">
+                                <h3 className="text-2xl font-medium text-black group-hover:text-[#333333] transition-colors">
                                     {item.title}
                                 </h3>
                                 <div className="flex items-center justify-between">
-                                    <p className="text-[#9B9B9B] text-base">
+                                    <p className="text-[#6B6B6B] text-base">
                                         {item.category}
                                     </p>
                                 </div>

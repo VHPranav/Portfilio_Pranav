@@ -4,6 +4,7 @@ import Image from "next/image";
 import { AnimatedText } from "@/components/ui/animated-text";
 import alpha from "../../public/images/alphaweb.webp"
 import clockhash from "../../public/images/clckweb.webp"
+import Link from "next/link";
 export default function Latest() {
     const projects = [
         {
@@ -12,7 +13,7 @@ export default function Latest() {
             description: "An intelligent AI assistant simplifying the recruitment process",
             tags: ["UI/UX", "Next.js", "Figma", "React"],
             image: alpha, // User will add their own background
-            link: "#"
+            link: "/work/design/alphainterface"
         },
         {
             id: 2,
@@ -20,7 +21,7 @@ export default function Latest() {
             description: "Building scalable software and digital solutions for modern businesses",
             tags: ["UI/UX", "Next.js", "Figma", "React"],
             image: clockhash, // User will add their own background
-            link: "#"
+            link: "/work/design/clockhash"
         }
     ];
 
@@ -80,12 +81,12 @@ export default function Latest() {
                                     <AnimatedText className="text-black/90 text-sm md:text-base leading-relaxed flex-1">
                                         {project.description}
                                     </AnimatedText>
-                                    <a
+                                    <Link
                                         href={project.link}
                                         className="inline-block text-black text-sm md:text-base font-normal hover:underline transition-all whitespace-nowrap"
                                     >
                                         View Case Study
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

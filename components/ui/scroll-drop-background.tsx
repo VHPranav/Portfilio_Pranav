@@ -26,6 +26,11 @@ export const ScrollDropBackground: React.FC = () => {
     useEffect(() => {
         if (!containerRef.current) return
 
+        // Ensure container is empty before appending new canvas
+        while (containerRef.current.firstChild) {
+            containerRef.current.removeChild(containerRef.current.firstChild);
+        }
+
         let width = window.innerWidth
         let height = window.innerHeight
 
@@ -198,6 +203,9 @@ export const ScrollDropBackground: React.FC = () => {
         window.addEventListener('resize', handleResize)
         window.addEventListener('mousemove', handleMouseMove)
 
+        // Initial check in case page is already scrolled
+        checkScroll()
+
         return () => {
             cancelAnimationFrame(animationFrameId)
             window.removeEventListener('scroll', checkScroll)
@@ -219,10 +227,24 @@ export const ScrollDropBackground: React.FC = () => {
             Matter.Engine.clear(engine)
 
             if (containerRef.current && renderer.domElement) {
+                // No need to manually remove child here as we do it on mount
+                // But keeping it for safety if unmount happens cleanly
                 if (containerRef.current.contains(renderer.domElement)) {
                     containerRef.current.removeChild(renderer.domElement)
                 }
             }
+
+            // Traverse and dispose all objects scene-wide for completeness
+            scene.traverse((object) => {
+                if (object instanceof THREE.Mesh) {
+                    object.geometry.dispose();
+                    if (Array.isArray(object.material)) {
+                        object.material.forEach((m: any) => m.dispose());
+                    } else {
+                        object.material.dispose();
+                    }
+                }
+            });
         }
     }, [])
 
