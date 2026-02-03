@@ -1,5 +1,6 @@
 "use client"
 
+import React from "react"
 import { useInView } from "@/components/hooks/use-in-view"
 
 interface AnimatedTextProps {
@@ -12,7 +13,9 @@ interface AnimatedTextProps {
 export function AnimatedText({ children, className = "", delay = 0, staggerDelay = 0.1 }: AnimatedTextProps) {
     const [ref, isInView] = useInView({ threshold: 0.3 })
 
-    const words = typeof children === "string" ? children.split(" ") : [children]
+    const words = React.Children.toArray(children).flatMap(child =>
+        typeof child === "string" ? child.trim().split(/\s+/) : child
+    )
 
     return (
         <div ref={ref} className={`${className}`} style={{ paddingBottom: "0.5rem", paddingTop: "0.5rem" }}>

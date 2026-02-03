@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Caveat } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
+import { GridLines } from "@/components/ui/grid-lines";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -17,7 +18,7 @@ const caveat = Caveat({
 
 
 export const metadata: Metadata = {
-  title: "V H Pranav - Portfolio",
+  title: "V H Pranav",
   description: "Front-end developer and UI/UX Designer",
 };
 
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${dmSans.className} ${caveat.variable}`}>
         <Navbar />
+        <GridLines />
         {children}
       </body>
     </html>
