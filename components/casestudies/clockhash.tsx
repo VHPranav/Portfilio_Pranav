@@ -105,7 +105,7 @@ export default function ClockHashCaseStudy() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 border-t border-gray-200 pt-8">
                             <div>
                                 <h3 className="text-sm font-semibold text-[#9B9B9B] uppercase tracking-wider mb-2">Timeline</h3>
-                                <p className="text-[#222224] text-lg">Month Year — Month Year</p>
+                                <p className="text-[#222224] text-lg">October 2025 — January 2026</p>
                             </div>
                             <div>
                                 <h3 className="text-sm font-semibold text-[#9B9B9B] uppercase tracking-wider mb-2">Platform</h3>

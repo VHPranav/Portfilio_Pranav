@@ -174,15 +174,9 @@ export default function Tools() {
                                     <h4 className="text-xl font-semibold text-[#222224] mb-2">
                                         {tool.name}
                                     </h4>
-                                    <TextAnimate className="text-[#6B6B6B] text-sm leading-relaxed"
-                                        animation="blurInUp"
-                                        as="p"
-                                        by="word"
-                                        delay={0.2}
-                                        staggerDelay={0.1}
-                                    >
+                                    <p className="text-[#6B6B6B] text-sm leading-relaxed">
                                         {tool.description}
-                                    </TextAnimate>
+                                    </p>
                                 </div>
                             </div>
                         ))}
@@ -228,15 +222,9 @@ export default function Tools() {
                                     <h4 className="text-xl font-semibold text-[#222224] mb-2">
                                         {tool.name}
                                     </h4>
-                                    <TextAnimate className="text-[#6B6B6B] text-sm leading-relaxed"
-                                        animation="blurInUp"
-                                        as="p"
-                                        by="word"
-                                        delay={0.2}
-                                        staggerDelay={0.1}
-                                    >
+                                    <p className="text-[#6B6B6B] text-sm leading-relaxed">
                                         {tool.description}
-                                    </TextAnimate>
+                                    </p>
                                 </div>
                             </div>
                         ))}
@@ -284,15 +272,9 @@ export default function Tools() {
                                     <h4 className="text-xl font-semibold text-[#222224] mb-2">
                                         {tool.name}
                                     </h4>
-                                    <TextAnimate className="text-[#6B6B6B] text-sm leading-relaxed"
-                                        animation="blurInUp"
-                                        as="p"
-                                        by="word"
-                                        delay={0.2}
-                                        staggerDelay={0.1}
-                                    >
+                                    <p className="text-[#6B6B6B] text-sm leading-relaxed">
                                         {tool.description}
-                                    </TextAnimate>
+                                    </p>
                                 </div>
                             </div>
                         ))}

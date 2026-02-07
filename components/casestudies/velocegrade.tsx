@@ -6,6 +6,17 @@ import { ScrollDropBackground } from "@/components/ui/scroll-drop-background";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
+import Image from "next/image";
+import one from "../../public/images/car/home.webp"
+import two from "../../public/images/car/mechland.webp"
+import three from "../../public/images/car/carlisthome.webp"
+import four from "../../public/images/car/carlist.webp"
+import five from "../../public/images/car/choose.webp"
+import six from "../../public/images/car/inspcrprt.webp"
+import seven from "../../public/images/car/mechanics.webp"
+import eight from "../../public/images/car/mechaniclist.webp"
+import nine from "../../public/images/car/mechprof.webp"
+import ten from "../../public/images/car/mechdash.webp"
 
 export default function VelocegradeCaseStudy() {
     const [activeSection, setActiveSection] = useState("overview");
@@ -107,9 +118,9 @@ export default function VelocegradeCaseStudy() {
                             </div>
                         </div>
 
-                        {/* Large Hero Image Placeholder */}
-                        <div className="w-full aspect-video bg-gray-200 rounded-2xl mb-12 flex items-center justify-center">
-                            <span className="text-gray-400 font-medium">Dashboard Hero Image</span>
+                        {/* Large Hero Image */}
+                        <div className="w-full aspect-video bg-gray-200 rounded-2xl mb-12 overflow-hidden relative border border-gray-100 shadow-sm">
+                            <Image src={one} alt="Dashboard Hero Shot" fill className="object-cover" />
                         </div>
 
                         <div className="space-y-6 text-lg text-[#6B6B6B] leading-relaxed max-w-4xl">
@@ -235,15 +246,15 @@ export default function VelocegradeCaseStudy() {
                             <div>
                                 <h3 className="text-xl font-medium text-[#222224] mb-4">2. Information Architecture</h3>
                                 <p className="text-[#6B6B6B] mb-4">The dashboard was structured around seller intent: Overview, Listings, Inquiries, Performance.</p>
-                                <div className="w-full aspect-[3/1] bg-gray-100 rounded-xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">IA Diagram</span>
+                                <div className="w-full aspect-[3/1] bg-gray-100 rounded-xl overflow-hidden relative border border-gray-100">
+                                    <Image src={two} alt="IA Diagram" fill className="object-cover" />
                                 </div>
                             </div>
                             <div>
                                 <h3 className="text-xl font-medium text-[#222224] mb-4">3. User Flows & Wireframes</h3>
                                 <p className="text-[#6B6B6B] mb-4">Adding a new vehicle, editing details, responding to buyers. Wireframes focused on reducing steps.</p>
-                                <div className="w-full aspect-[21/9] bg-gray-100 rounded-xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Wireframes Overview</span>
+                                <div className="w-full aspect-[21/9] bg-gray-100 rounded-xl overflow-hidden relative border border-gray-100">
+                                    <Image src={three} alt="Wireframes Overview" fill className="object-cover" />
                                 </div>
                             </div>
                             <div>
@@ -260,8 +271,8 @@ export default function VelocegradeCaseStudy() {
                         <div className="space-y-24">
                             {/* Seller Overview */}
                             <div>
-                                <div className="w-full aspect-video bg-gray-100 rounded-2xl flex items-center justify-center mb-8">
-                                    <span className="text-gray-400 font-medium">Seller Overview Dashboard UI</span>
+                                <div className="w-full aspect-video bg-gray-100 rounded-2xl overflow-hidden relative border border-gray-100 mb-8">
+                                    <Image src={nine} alt="Seller Overview Dashboard UI" fill className="object-cover" />
                                 </div>
                                 <h3 className="text-xl font-medium text-[#222224] mb-4">Seller Overview Dashboard</h3>
                                 <p className="text-[#6B6B6B]">A high-level snapshot showing active listings, new inquiries, and performance indicators. Designed for quick daily check-ins.</p>
@@ -273,20 +284,20 @@ export default function VelocegradeCaseStudy() {
                                     <h3 className="text-xl font-medium text-[#222224] mb-4">Listings Management</h3>
                                     <p className="text-[#6B6B6B] mb-4">View all vehicles at a glance, edit/pause/relist easily, and track status changes. Bulk-friendly layouts support power sellers.</p>
                                 </div>
-                                <div className="w-full aspect-square bg-gray-100 rounded-2xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Listings Table UI</span>
+                                <div className="w-full aspect-square bg-gray-100 rounded-2xl overflow-hidden relative border border-gray-100">
+                                    <Image src={four} alt="Listings Table UI" fill className="object-cover" />
                                 </div>
                             </div>
 
                             {/* Extra Image Space 1 */}
-                            <div className="w-full aspect-[21/9] bg-[#F5F5F3] rounded-2xl flex items-center justify-center">
-                                <span className="text-gray-400 font-medium">Detail Shot / Interaction Flow</span>
+                            <div className="w-full aspect-[21/9] bg-[#F5F5F3] rounded-2xl overflow-hidden relative border border-gray-100">
+                                <Image src={five} alt="Detail Shot / Interaction Flow" fill className="object-cover" />
                             </div>
 
                             {/* Buyer Inquiries */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                                <div className="order-2 md:order-1 w-full aspect-square bg-gray-100 rounded-2xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Inbox UI</span>
+                                <div className="order-2 md:order-1 w-full aspect-square bg-gray-100 rounded-2xl overflow-hidden relative border border-gray-100">
+                                    <Image src={seven} alt="Inbox UI" fill className="object-cover" />
                                 </div>
                                 <div className="order-1 md:order-2">
                                     <h3 className="text-xl font-medium text-[#222224] mb-4">Buyer Inquiries & Leads</h3>
@@ -298,18 +309,18 @@ export default function VelocegradeCaseStudy() {
                             <div>
                                 <h3 className="text-xl font-medium text-[#222224] mb-4">Performance Insights</h3>
                                 <p className="text-[#6B6B6B] mb-8">Simple metrics help sellers understand views, conversion to inquiries, and optimization needs.</p>
-                                <div className="w-full aspect-video bg-gray-100 rounded-2xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Performance Charts UI</span>
+                                <div className="w-full aspect-video bg-gray-100 rounded-2xl overflow-hidden relative border border-gray-100">
+                                    <Image src={nine} alt="Performance Charts UI" fill className="object-cover" />
                                 </div>
                             </div>
 
                             {/* Extra Image Space 2 */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div className="aspect-[4/3] bg-[#F5F5F3] rounded-2xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Mobile Screens</span>
+                                <div className="aspect-[4/3] bg-[#F5F5F3] rounded-2xl overflow-hidden relative border border-gray-100">
+                                    <Image src={ten} alt="Mobile Screens" fill className="object-cover" />
                                 </div>
-                                <div className="aspect-[4/3] bg-[#F5F5F3] rounded-2xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Notifications / Alerts</span>
+                                <div className="aspect-[4/3] bg-[#F5F5F3] rounded-2xl overflow-hidden relative border border-gray-100">
+                                    <Image src={eight} alt="Notifications / Alerts" fill className="object-cover" />
                                 </div>
                             </div>
                         </div>
@@ -337,14 +348,14 @@ export default function VelocegradeCaseStudy() {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="w-full aspect-[4/5] bg-white rounded-2xl shadow-sm flex items-center justify-center border border-gray-100">
-                                    <span className="text-gray-400 font-medium">Mechanic Inspection App UI</span>
+                                <div className="w-full aspect-[4/5] bg-white rounded-2xl shadow-sm overflow-hidden relative border border-gray-100">
+                                    <Image src={eight} alt="Mechanic Inspection App UI" fill className="object-cover" />
                                 </div>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                                <div className="order-2 md:order-1 w-full aspect-video bg-white rounded-2xl shadow-sm flex items-center justify-center border border-gray-100">
-                                    <span className="text-gray-400 font-medium">Certificate & Badge Design</span>
+                                <div className="order-2 md:order-1 w-full aspect-video bg-white rounded-2xl shadow-sm overflow-hidden relative border border-gray-100">
+                                    <Image src={six} alt="Certificate & Badge Design" fill className="object-cover" />
                                 </div>
                                 <div className="order-1 md:order-2">
                                     <h3 className="text-xl font-medium text-[#222224] mb-4">The "Velocegrade Certified" Badge</h3>

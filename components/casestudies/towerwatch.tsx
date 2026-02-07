@@ -6,6 +6,9 @@ import { ScrollDropBackground } from "@/components/ui/scroll-drop-background";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
+import Image from "next/image";
+import one from "../../public/images/webp/towerone.webp"
+import two from "../../public/images/webp/twrwtch.webp"
 
 export default function TowerWatchCaseStudy() {
     const [activeSection, setActiveSection] = useState("overview");
@@ -106,10 +109,6 @@ export default function TowerWatchCaseStudy() {
                                 <p className="text-[#222224] text-lg">Web Dashboard</p>
                             </div>
                             <div>
-                                <h3 className="text-sm font-semibold text-[#9B9B9B] uppercase tracking-wider mb-2">Timeline</h3>
-                                <p className="text-[#222224] text-lg">Month Year — Month Year</p>
-                            </div>
-                            <div>
                                 <h3 className="text-sm font-semibold text-[#9B9B9B] uppercase tracking-wider mb-2">Services</h3>
                                 <p className="text-[#222224] text-lg">Product Design · Dashboard</p>
                             </div>
@@ -117,7 +116,7 @@ export default function TowerWatchCaseStudy() {
 
                         {/* Large Hero Image Placeholder */}
                         <div className="w-full aspect-video bg-gray-200 rounded-2xl mb-12 flex items-center justify-center">
-                            <span className="text-gray-400 font-medium">TowerWatch Hero Image</span>
+                            <Image src={two} alt="TowerWatch Hero Image" className="w-full aspect-video rounded-2xl" />
                         </div>
 
                         <div className="space-y-6 text-lg text-[#6B6B6B] leading-relaxed max-w-4xl">
@@ -166,7 +165,7 @@ export default function TowerWatchCaseStudy() {
                         <div className="space-y-16">
                             <div className="flex flex-col md:flex-row gap-12 items-center">
                                 <div className="w-full md:w-1/2 aspect-[4/3] bg-[#F5F5F3] rounded-xl flex items-center justify-center text-gray-400">
-                                    Floor Plan UI Placeholder
+                                    <Image src={one} alt="TowerWatch Hero Image" className="w-full aspect-video rounded-2xl" />
                                 </div>
                                 <div className="w-full md:w-1/2">
                                     <h3 className="text-xl font-medium text-[#222224] mb-4">Contextual Energy Data</h3>

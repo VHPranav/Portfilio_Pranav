@@ -40,11 +40,16 @@ export default function Home() {
                     fieldStrength={10}
                 />
             </div>
+
+            {/* Gradient Blur Effect */}
+            <div className="absolute -top-40 -left-40 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-gradient-to-br from-[#00E5FF] via-[#2979FF] to-[#AA00FF] opacity-30 blur-[100px] md:blur-[150px] z-0 rounded-full pointer-events-none" />
+            <div className="absolute bottom-50 -right-40 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-gradient-to-br from-[#00E5FF] via-[#2979FF] to-[#AA00FF] opacity-30 blur-[100px] md:blur-[150px] z-0 rounded-full pointer-events-none" />
+
             <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 w-full flex flex-col items-start text-left">
 
                 {/* Top Small Text */}
                 <div className="mb-4">
-                    <p className="text-xl md:text-2xl font-semibold text-[#222224]">
+                    <p className="text-xl md:text-2xl font-meduim text-[#222224]">
                         You don't need <DecryptedText
                             key={index}
                             text={words[index]}
@@ -60,14 +65,14 @@ export default function Home() {
                 {/* Main Headline */}
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-                        <span className="text-6xl md:text-[100px] font-bold text-[#222224] leading-[0.9]">
+                        <span className="text-6xl md:text-[100px] font-semibold text-[#222224] leading-[0.9]">
                             You need a
                         </span>
-                        <span className="relative text-6xl md:text-[100px] font-bold text-[#222224] leading-[0.9]">
+                        <span className="relative text-6xl md:text-[100px] font-semibold text-[#222224] leading-[0.9]">
                             <span className="relative z-10 ">creative</span>
                             <div className="absolute inset-x-0 bottom-2 md:bottom-6 h-8 md:h-12 bg-[yellow] -z-10 rotate-1"></div>
                         </span>
-                        <span className="relative text-6xl md:text-[100px] font-bold text-[#222224] leading-[0.9]">
+                        <span className="relative text-6xl md:text-[100px] font-semibold text-[#222224] leading-[0.9]">
                             <span className="relative z-10 "> product engineer</span>
                         </span>
                     </div>
@@ -75,9 +80,9 @@ export default function Home() {
 
                 {/* Sub-text and Testimonial Section */}
                 <div className="mt-6 flex flex-col items-start max-w-xl md:max-w-3xl">
-                    <AnimatedText className="text-lg md:text-xl text-[#666666] leading-relaxed" delay={0.5}>
+                    <AnimatedText className="text-lg md:text-xl font-light text-[#666666] leading-relaxed" delay={0.5}>
                         I’m V H Pranav
-                        <span className="inline-block mx-2 translate-y-1">
+                        {/* <span className="inline-block mx-2 translate-y-1">
                             <Image
                                 src={me}
                                 alt="V H Pranav"
@@ -85,7 +90,7 @@ export default function Home() {
                                 height={40}
                                 className="rounded-xl w-20 h-8 md:w-20 md:h-10 object-cover border border-[#E5E5E5]"
                             />
-                        </span>
+                        </span> */}
                         a Creative Front-End Developer & UI/UX Designer. I build clean, high-performance interfaces where motion and engineering come together, turning ideas into scalable, production-ready experiences.
                     </AnimatedText>
                 </div>

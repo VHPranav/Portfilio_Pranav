@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
 import { ScrollDropBackground } from "@/components/ui/scroll-drop-background";
+import alpha from "../../public/images/webp/alphdash.webp"
 import one from "../../public/images/alpha/dashone.webp"
 import two from "../../public/images/alpha/dashtwo.webp"
 import three from "../../public/images/alpha/dashthree.webp"
@@ -95,8 +96,8 @@ export default function AlphaInterfaceCaseStudy() {
 
                     {/* Hero & Overview */}
                     <div id="overview" className="scroll-mt-32">
-                        <AnimatedText className="text-4xl md:text-6xl font-semibold text-[#222224] mb-8 leading-tight tracking-tight">
-                            Redesigning the Alpha Interface Dashboard
+                        <AnimatedText className="text-4xl md:text-6xl font-normal text-[#222224] mb-8 leading-tight tracking-tight">
+                            Redesigning the HR Recruitment Assistant Dashboard
                         </AnimatedText>
 
                         <div className="flex flex-wrap gap-x-12 gap-y-8 mb-16 pt-8 border-t border-gray-200">
@@ -107,7 +108,7 @@ export default function AlphaInterfaceCaseStudy() {
                             </div>
                             <div>
                                 <h3 className="text-xs font-bold text-[#9B9B9B] uppercase tracking-widest mb-2">Product</h3>
-                                <p className="text-[#222224] font-medium">AI Agents Platform</p>
+                                <p className="text-[#222224] font-medium">AI-Powered HR Recruitment Platform</p>
                             </div>
                             <div>
                                 <h3 className="text-xs font-bold text-[#9B9B9B] uppercase tracking-widest mb-2">Platform</h3>
@@ -118,16 +119,19 @@ export default function AlphaInterfaceCaseStudy() {
                         {/* Large Hero Image Placeholder */}
                         {/* Large Hero Image */}
                         <div className="w-full aspect-[16/9] bg-[#F0F0F0] rounded-lg mb-12 overflow-hidden relative border border-gray-100 shadow-sm">
-                            <Image src={one} alt="Dashboard Hero Shot" fill className="object-cover" />
+                            <Image src={alpha} alt="Dashboard Hero Shot" fill className="object-cover" />
                         </div>
 
                         <div className="space-y-6 text-lg text-[#555] leading-relaxed max-w-3xl">
                             <h2 className="text-2xl font-medium text-[#222224] mb-2">Introduction</h2>
                             <p>
-                                Alpha Interface is an AI agents platform that enables businesses to deploy and manage chat, voice, and email AI agents from a single interface.
+                                As you know, I was redesigning the HR Recruitment Assistant Dashboard, a platform that helps hiring teams manage candidates, automate recruitment workflows, and make faster, better hiring decisions.
                             </p>
                             <p>
-                                As the product evolved, the existing dashboard struggled to support growing complexity—more agents, more configurations, and more user expectations. <strong className="text-[#222224]">The goal of this redesign was to create a clear, scalable, and intuitive dashboard</strong> that allows users to understand, control, and trust their AI agents.
+                                In the latest update, we also introduced an AI Chat Assistant—giving recruiters a conversational way to query candidate data, generate summaries, and get instant hiring insights without navigating complex screens.
+                            </p>
+                            <p>
+                                As the product evolved, the dashboard needed to support growing complexity: more candidates, more workflows, and now multiple AI-driven assistants. <strong className="text-[#222224]">The goal of this redesign was to create a clear, scalable, and intuitive dashboard</strong> that allows users to understand, control, and trust AI-powered recruitment tools.
                             </p>
                         </div>
                     </div>
@@ -143,10 +147,10 @@ export default function AlphaInterfaceCaseStudy() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {[
-                                { title: "Cognitive Overload", desc: "The dashboard presented too much information at once. Users struggled to understand agent status or what action to take, leading to hesitation." },
-                                { title: "Unclear Mental Model", desc: "Users struggled to answer basic questions: What is an 'agent'? How do modalities differ? Without a clear structure, the product felt harder than it was." },
-                                { title: "Inconsistent UI Patterns", desc: "As features were added quickly, components behaved differently across pages. The learning curve increased unnecessarily." },
-                                { title: "Poor Scalability", desc: "The existing layout did not anticipate multiple agents or future analytics. Adding new features risked cluttering the interface even further." }
+                                { title: "Cognitive Overload", desc: "Recruiters were presented with too much information at once—candidate lists, pipeline stages, metrics, and automations—making it difficult to know what required attention." },
+                                { title: "Unclear Mental Model", desc: "Users struggled to understand how different AI features worked together. What does the recruitment assistant handle? When should they use the AI Chat Assistant?" },
+                                { title: "Inconsistent UI Patterns", desc: "As features were added rapidly, components behaved differently across screens. This inconsistency increased learning time and reduced confidence." },
+                                { title: "Poor Scalability", desc: "The existing layout wasn’t designed for multiple AI tools or advanced analytics. Adding the AI Chat Assistant risked further clutter without a rethink." }
                             ].map((prob, i) => (
                                 <div key={i} className="bg-white p-8 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors">
                                     <div className="text-[#222224] font-bold text-lg mb-3">0{i + 1} — {prob.title}</div>
@@ -163,17 +167,17 @@ export default function AlphaInterfaceCaseStudy() {
                             <div>
                                 <h3 className="text-lg font-medium text-[#222224] mb-6 border-l-2 border-[#222224] pl-4">Business Goals</h3>
                                 <ul className="space-y-4 text-[#6B6B6B]">
-                                    <li>Support growth as a multi-agent platform</li>
-                                    <li>Increase user activation and feature adoption</li>
-                                    <li>Build a dashboard that scales with AI capabilities</li>
+                                    <li>Support growth as an AI-driven recruitment platform</li>
+                                    <li>Increase adoption of AI-assisted hiring features</li>
+                                    <li>Create a dashboard that scales with future AI capabilities</li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 className="text-lg font-medium text-[#222224] mb-6 border-l-2 border-[#222224] pl-4">User Goals</h3>
                                 <ul className="space-y-4 text-[#6B6B6B]">
-                                    <li>Instantly understand agent status and performance</li>
-                                    <li>Easily configure and manage agents</li>
-                                    <li>Feel confident and in control of AI systems</li>
+                                    <li>Quickly understand hiring pipeline health</li>
+                                    <li>Manage candidates and workflows efficiently</li>
+                                    <li>Confidently interact with AI assistants for recruitment tasks</li>
                                 </ul>
                             </div>
                         </div>
@@ -185,24 +189,24 @@ export default function AlphaInterfaceCaseStudy() {
                         <p className="mb-8 text-[#6B6B6B]">Instead of traditional personas, I focused on usage-driven roles to guide the dashboard structure.</p>
                         <div className="space-y-6">
                             <div className="flex gap-4">
-                                <span className="bg-[#222224] text-white w-8 h-8 flex items-center justify-center rounded-full shrink-0 font-bold text-sm">F</span>
+                                <span className="bg-[#222224] text-white w-8 h-8 flex items-center justify-center rounded-full shrink-0 font-bold text-sm">R</span>
                                 <div>
-                                    <h4 className="font-medium text-[#222224]">The Founder / Decision Maker</h4>
-                                    <p className="text-[#6B6B6B] text-sm">Wants high-level visibility and confidence that AI agents are working.</p>
+                                    <h4 className="font-medium text-[#222224]">The Recruiter</h4>
+                                    <p className="text-[#6B6B6B] text-sm">Manages candidates, interviews, and shortlisting on a daily basis.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
-                                <span className="bg-[#222224] text-white w-8 h-8 flex items-center justify-center rounded-full shrink-0 font-bold text-sm">O</span>
+                                <span className="bg-[#222224] text-white w-8 h-8 flex items-center justify-center rounded-full shrink-0 font-bold text-sm">H</span>
                                 <div>
-                                    <h4 className="font-medium text-[#222224]">The Operator</h4>
-                                    <p className="text-[#6B6B6B] text-sm">Manages configurations, prompts, and workflows daily.</p>
+                                    <h4 className="font-medium text-[#222224]">The Hiring Manager</h4>
+                                    <p className="text-[#6B6B6B] text-sm">Wants high-level visibility into hiring progress and bottlenecks.</p>
                                 </div>
                             </div>
                             <div className="flex gap-4">
                                 <span className="bg-[#222224] text-white w-8 h-8 flex items-center justify-center rounded-full shrink-0 font-bold text-sm">T</span>
                                 <div>
-                                    <h4 className="font-medium text-[#222224]">The Technical User</h4>
-                                    <p className="text-[#6B6B6B] text-sm">Cares about integrations, logic, and system reliability.</p>
+                                    <h4 className="font-medium text-[#222224]">The Technical / Ops User</h4>
+                                    <p className="text-[#6B6B6B] text-sm">Cares about integrations, automation logic, and system reliability.</p>
                                 </div>
                             </div>
                         </div>
@@ -218,9 +222,9 @@ export default function AlphaInterfaceCaseStudy() {
                                     <span className="text-4xl text-[#E5E5E5] font-bold">01</span>
                                     <h3 className="text-xl font-medium text-[#222224]">Defining Structure</h3>
                                 </div>
-                                <p className="text-[#6B6B6B] max-w-2xl mb-6 pl-14">I started by defining a clear hierarchy where each section has a single primary purpose: Overview (Status), Agents (Management), Configurations (Logic), Insights (Analytics).</p>
+                                <p className="text-[#6B6B6B] max-w-2xl mb-6 pl-14">I redefined the dashboard hierarchy so each section serves a single purpose: Overview (pipeline health), Candidates (profiles/evaluations), Automation (workflows), AI Assistants, and Insights.</p>
                                 <div className="pl-14 w-full aspect-[3/1] bg-[#F0F0F0] rounded overflow-hidden relative text-gray-400 text-sm">
-                                    <Image src={two} alt="IA / Sitemap Diagram" fill className="object-cover" />
+                                    <Image src={one} alt="IA / Sitemap Diagram" fill className="object-cover" />
                                 </div>
                             </div>
 
@@ -229,7 +233,7 @@ export default function AlphaInterfaceCaseStudy() {
                                     <span className="text-4xl text-[#E5E5E5] font-bold">02</span>
                                     <h3 className="text-xl font-medium text-[#222224]">Task Mapping</h3>
                                 </div>
-                                <p className="text-[#6B6B6B] max-w-2xl mb-6 pl-14">Key workflows like "Creating an Agent" or "Editing Prompts" were mapped to reduce steps and decision fatigue. We focused on linear, focused flows.</p>
+                                <p className="text-[#6B6B6B] max-w-2xl mb-6 pl-14">Core workflows such as reviewing candidates, shortlisting, and asking AI for insights were mapped into focused, linear flows. The AI Chat Assistant complements—doesn't replace—existing workflows.</p>
                             </div>
 
                             <div>
@@ -237,7 +241,7 @@ export default function AlphaInterfaceCaseStudy() {
                                     <span className="text-4xl text-[#E5E5E5] font-bold">03</span>
                                     <h3 className="text-xl font-medium text-[#222224]">Visual System</h3>
                                 </div>
-                                <p className="text-[#6B6B6B] max-w-2xl mb-6 pl-14">The UI direction focused on a calm, neutral palette to offset complexity. Animations were used to reinforce cause-and-effect, critical for building trust in AI actions.</p>
+                                <p className="text-[#6B6B6B] max-w-2xl mb-6 pl-14">The visual system uses a calm, neutral palette to reduce cognitive strain. Subtle animations reinforce cause-and-effect, especially when AI actions are triggered—helping users build trust.</p>
                                 <div className="pl-14 grid grid-cols-2 gap-4">
                                     <div className="aspect-square bg-[#F9F9F9] rounded border border-gray-100 overflow-hidden relative">
                                         <Image src={three} alt="Visual System 1" fill className="object-cover" />
@@ -258,7 +262,7 @@ export default function AlphaInterfaceCaseStudy() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                                 <div className="order-2 md:order-1 bg-white p-8 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100">
                                     <h3 className="text-lg font-medium text-[#222224] mb-3">Focused Dashboard Overview</h3>
-                                    <p className="text-[#6B6B6B] text-sm leading-relaxed">Prioritizes agent status and key metrics. Users can understand system health within seconds without digging deeper.</p>
+                                    <p className="text-[#6B6B6B] text-sm leading-relaxed">Key hiring metrics and pipeline status are surfaced first. Users can understand recruitment health within seconds without diving into details.</p>
                                 </div>
                                 <div className="order-1 md:order-2 aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden relative">
                                     <Image src={five} alt="Focused Dashboard Overview" fill className="object-cover" />
@@ -270,15 +274,15 @@ export default function AlphaInterfaceCaseStudy() {
                                     <Image src={six} alt="Agent-Centric Navigation" fill className="object-cover" />
                                 </div>
                                 <div className="bg-white p-8 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100">
-                                    <h3 className="text-lg font-medium text-[#222224] mb-3">Agent-Centric Navigation</h3>
-                                    <p className="text-[#6B6B6B] text-sm leading-relaxed">Instead of feature-based navigation, the dashboard is structured around agents (the user's mental model). Each agent bundles its own configuration and logs.</p>
+                                    <h3 className="text-lg font-medium text-[#222224] mb-3">AI-Assisted, Candidate-Centric Navigation</h3>
+                                    <p className="text-[#6B6B6B] text-sm leading-relaxed">The dashboard is structured around candidates and hiring stages. The AI Chat Assistant remains persistently accessible for summaries and insights at any point.</p>
                                 </div>
                             </div>
 
                             <div className="w-full">
                                 <div className="text-center max-w-xl mx-auto mb-8">
                                     <h3 className="text-lg font-medium text-[#222224] mb-2">Built for Scale</h3>
-                                    <p className="text-[#6B6B6B]">The layout anticipates dozens of agents and future AI modalities.</p>
+                                    <p className="text-[#6B6B6B]">The layout anticipates growing hiring volume, multiple roles, and future AI capabilities—without overwhelming the user.</p>
                                 </div>
                                 <div className="w-full aspect-[21/9] bg-gray-100 rounded-xl overflow-hidden relative">
                                     <Image src={seven} alt="Built for Scale" fill className="object-cover" />
@@ -292,9 +296,10 @@ export default function AlphaInterfaceCaseStudy() {
                         <div>
                             <h2 className="text-xl font-medium text-[#222224] mb-6">Impact</h2>
                             <ul className="space-y-4 text-[#6B6B6B]">
-                                <li className="flex gap-3"><span className="text-[#222224] font-bold">→</span> Task completion became faster and more predictable</li>
-                                <li className="flex gap-3"><span className="text-[#222224] font-bold">→</span> Product felt more approachable despite complexity</li>
-                                <li className="flex gap-3"><span className="text-[#222224] font-bold">→</span> Foundation set for future AI features</li>
+                                <li className="flex gap-3"><span className="text-[#222224] font-bold">→</span> Faster and more predictable recruitment workflows</li>
+                                <li className="flex gap-3"><span className="text-[#222224] font-bold">→</span> Improved adoption of AI-assisted hiring features</li>
+                                <li className="flex gap-3"><span className="text-[#222224] font-bold">→</span> Reduced cognitive load for recruiters and hiring managers</li>
+                                <li className="flex gap-3"><span className="text-[#222224] font-bold">→</span> Strong foundation for future AI tools in hiring</li>
                             </ul>
                         </div>
                         <div>
@@ -318,7 +323,7 @@ export default function AlphaInterfaceCaseStudy() {
                             "Reduce complexity, clarify intent, and design for growth."
                         </p>
                         <p className="text-[#6B6B6B]">
-                            This dashboard redesign helped transform Alpha Interface from a collection of features into a cohesive, scalable AI platform.
+                            This redesign transformed the HR Recruitment Assistant from a feature-heavy tool into a cohesive, scalable, and AI-first recruitment platform.
                         </p>
                     </div>
 

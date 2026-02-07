@@ -164,11 +164,6 @@ export default function AboutMe() {
                         <div className="relative border-l border-[#E5E5E5] ml-3 pl-8 flex flex-col gap-10">
                             {[
                                 {
-                                    year: "2002",
-                                    title: "Deployed to Production (Earth)",
-                                    description: "Hello World! I arrived, crying and undocumented."
-                                },
-                                {
                                     year: "2018",
                                     title: "High School: Completed",
                                     description: "Survived 10th Grade. Tutorial level complete. Graphics were great, gameplay was repetitive."

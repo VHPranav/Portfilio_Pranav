@@ -6,6 +6,11 @@ import { ScrollDropBackground } from "@/components/ui/scroll-drop-background";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
+import Image from "next/image";
+import one from "@/public/images/market/landd.webp"
+import two from "@/public/images/market/offer.webp"
+import three from "@/public/images/market/circle.webp"
+import four from "@/public/images/market/prjtbuild.webp"
 
 export default function MarketingCaseStudy() {
     const [activeSection, setActiveSection] = useState("overview");
@@ -90,6 +95,17 @@ export default function MarketingCaseStudy() {
                             Designing the ClockHash Marketing Website
                         </AnimatedText>
 
+                        <div className="mb-12">
+                            <Link
+                                href="https://clockhash.com/your-solution-partner/mvp-product-development-solution"
+                                target="_blank"
+                                className="inline-flex items-center gap-2 bg-[#222224] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#333] transition-all shadow-sm group"
+                            >
+                                Live Sneak Peek
+                                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                            </Link>
+                        </div>
+
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 border-t border-gray-200 pt-8">
                             <div>
                                 <h3 className="text-sm font-semibold text-[#9B9B9B] uppercase tracking-wider mb-2">Internal Project</h3>
@@ -107,8 +123,8 @@ export default function MarketingCaseStudy() {
                             </div>
                         </div>
 
-                        <div className="w-full aspect-video bg-gray-200 rounded-2xl mb-12 flex items-center justify-center">
-                            <span className="text-gray-400 font-medium">Marketing Hero Image</span>
+                        <div className="w-full aspect-video bg-gray-200 rounded-2xl mb-12 overflow-hidden relative border border-gray-100 shadow-sm">
+                            <Image src={one} alt="Marketing Hero Shot" fill className="object-cover" />
                         </div>
 
                         <div className="space-y-6 text-lg text-[#6B6B6B] leading-relaxed max-w-4xl">
@@ -159,15 +175,15 @@ export default function MarketingCaseStudy() {
                     <div id="gallery" className="scroll-mt-32">
                         <h2 className="text-2xl md:text-3xl font-medium text-[#222224] mb-12">Visual Sneak Peek</h2>
                         <div className="space-y-8">
-                            <div className="w-full aspect-video bg-gray-100 rounded-2xl flex items-center justify-center">
-                                <span className="text-gray-400 font-medium">Homepage Layout (Desktop)</span>
+                            <div className="w-full aspect-video bg-gray-100 rounded-2xl overflow-hidden relative border border-gray-100">
+                                <Image src={three} alt="Homepage Layout" fill className="object-cover" />
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div className="aspect-square bg-gray-100 rounded-2xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Mobile Responsiveness</span>
+                                <div className="aspect-square bg-gray-100 rounded-2xl overflow-hidden relative border border-gray-100">
+                                    <Image src={two} alt="Mobile Responsiveness" fill className="object-cover" />
                                 </div>
-                                <div className="aspect-square bg-gray-100 rounded-2xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Service Cards / Details</span>
+                                <div className="aspect-square bg-gray-100 rounded-2xl overflow-hidden relative border border-gray-100">
+                                    <Image src={four} alt="Service Cards Detail" fill className="object-cover" />
                                 </div>
                             </div>
                         </div>

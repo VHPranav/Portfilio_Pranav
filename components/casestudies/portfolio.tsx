@@ -6,6 +6,11 @@ import { ScrollDropBackground } from "@/components/ui/scroll-drop-background";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
+import Image from "next/image";
+import prof from "../../public/images/portfolio/land.webp"
+import one from "../../public/images/portfolio/prof.webp"
+import two from "../../public/images/portfolio/team.webp"
+import three from "../../public/images/portfolio/teamtwo.webp"
 
 export default function PortfolioCaseStudy() {
     const [activeSection, setActiveSection] = useState("overview");
@@ -42,7 +47,9 @@ export default function PortfolioCaseStudy() {
 
     const navItems = [
         { label: "Overview", id: "overview" },
-        { label: "Design Goals", id: "design" },
+        { label: "Objective", id: "objective" },
+        { label: "Design Approach", id: "design" },
+        { label: "Key Features", id: "features" },
         { label: "Design Emphasis", id: "emphasis" },
         { label: "Visual Gallery", id: "gallery" },
         { label: "Conclusion", id: "conclusion" },
@@ -86,7 +93,7 @@ export default function PortfolioCaseStudy() {
                     {/* Hero & Overview */}
                     <div id="overview" className="scroll-mt-32">
                         <AnimatedText className="text-4xl md:text-6xl font-medium text-[#222224] mb-8 leading-tight">
-                            Designing the Portfolio Experience for ClockHash
+                            Designing the Employee Portfolio Experience for ClockHash
                         </AnimatedText>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 border-t border-gray-200 pt-8">
@@ -104,7 +111,7 @@ export default function PortfolioCaseStudy() {
                             </div>
                             <div>
                                 <h3 className="text-sm font-semibold text-[#9B9B9B] uppercase tracking-wider mb-2">Platform</h3>
-                                <p className="text-[#222224] text-lg">Marketing Website</p>
+                                <p className="text-[#222224] text-lg">Web Application (Company Website)</p>
                             </div>
                             <div>
                                 <h3 className="text-sm font-semibold text-[#9B9B9B] uppercase tracking-wider mb-2">Timeline</h3>
@@ -112,19 +119,36 @@ export default function PortfolioCaseStudy() {
                             </div>
                             <div>
                                 <h3 className="text-sm font-semibold text-[#9B9B9B] uppercase tracking-wider mb-2">Services</h3>
-                                <p className="text-[#222224] text-lg">Product Design · Frontend</p>
+                                <p className="text-[#222224] text-lg">Product Design · Frontend Development</p>
                             </div>
                         </div>
 
-                        {/* Large Hero Image Placeholder */}
-                        <div className="w-full aspect-video bg-gray-200 rounded-2xl mb-12 flex items-center justify-center">
-                            <span className="text-gray-400 font-medium">Portfolio Hero Image</span>
+                        {/* Large Hero Image */}
+                        <div className="w-full aspect-video bg-gray-200 rounded-2xl mb-12 overflow-hidden relative border border-gray-100 shadow-sm">
+                            <Image src={prof} alt="Portfolio Hero Shot" fill className="object-cover" />
                         </div>
 
                         <div className="space-y-6 text-lg text-[#6B6B6B] leading-relaxed max-w-4xl">
-                            <h2 className="text-2xl md:text-3xl font-medium text-[#222224] mb-4">A Curated Showcase</h2>
+                            <h2 className="text-2xl md:text-3xl font-medium text-[#222224] mb-4">Introduction</h2>
                             <p>
-                                ClockHash’s portfolio page is designed to present work with clarity, confidence, and intent. Rather than overwhelming visitors, the goal was to curate projects thoughtfully—allowing the work to speak while reinforcing the brand’s design maturity.
+                                This project focused on designing and building an employee portfolio experience for ClockHash—a centralized platform to showcase the team’s skills, roles, and professional profiles.
+                            </p>
+                            <p>
+                                The goal was to move beyond a static “team page” and create a structured, scalable system where visitors can explore employees by job category, view detailed individual profiles, and download CVs when needed. The experience needed to be clear, professional, and aligned with ClockHash’s design and engineering standards.
+                            </p>
+                        </div>
+
+                        <div id="objective" className="scroll-mt-32 mt-16">
+                            <h2 className="text-2xl md:text-3xl font-medium text-[#222224] mb-6">The Objective</h2>
+                            <p className="text-lg text-[#6B6B6B] mb-8">The employee portfolio was designed to:</p>
+                            <ul className="space-y-4 text-[#6B6B6B] text-lg">
+                                <li className="flex gap-3 items-start"><span className="text-[#222224] mt-1.5">•</span> <span>Present team members with clarity and credibility</span></li>
+                                <li className="flex gap-3 items-start"><span className="text-[#222224] mt-1.5">•</span> <span>Make it easy to browse employees by job category</span></li>
+                                <li className="flex gap-3 items-start"><span className="text-[#222224] mt-1.5">•</span> <span>Allow quick access to individual profiles and CVs</span></li>
+                                <li className="flex gap-3 items-start"><span className="text-[#222224] mt-1.5">•</span> <span>Scale smoothly as the team grows</span></li>
+                            </ul>
+                            <p className="text-lg text-[#6B6B6B] mt-8">
+                                Rather than overwhelming visitors, the focus was on curation and structure—letting each profile communicate expertise without unnecessary noise.
                             </p>
                         </div>
                     </div>
@@ -158,23 +182,52 @@ export default function PortfolioCaseStudy() {
                     </div>
 
                     {/* Design Emphasis */}
-                    <div id="emphasis" className="scroll-mt-32">
-                        <h2 className="text-2xl md:text-3xl font-medium text-[#222224] mb-12">The Design Emphasizes</h2>
+                    <div id="features" className="scroll-mt-32">
+                        <h2 className="text-2xl md:text-3xl font-medium text-[#222224] mb-12">Key Features</h2>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+                            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                                <h3 className="text-xl font-medium text-[#222224] mb-4">Job Category Filtering</h3>
+                                <p className="text-[#6B6B6B]">Employees can be browsed by job category (e.g., Design, Engineering, Product), helping users quickly find relevant profiles.</p>
+                            </div>
+                            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                                <h3 className="text-xl font-medium text-[#222224] mb-4">Individual Employee Profiles</h3>
+                                <p className="text-[#6B6B6B]">Each profile includes role, experience highlights, skills, and a focused presentation of the employee’s background.</p>
+                            </div>
+                            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                                <h3 className="text-xl font-medium text-[#222224] mb-4">CV Download</h3>
+                                <p className="text-[#6B6B6B]">Users can directly download an employee’s CV from their profile, making the platform practical for clients, partners, and internal use.</p>
+                            </div>
+                        </div>
+
+                        <h2 className="text-2xl md:text-3xl font-medium text-[#222224] mb-12">Design Emphasis</h2>
 
                         <div className="space-y-16">
                             <div className="flex flex-col md:flex-row gap-8 items-center">
-                                <div className="w-full md:w-1/2 aspect-video bg-[#F5F5F3] rounded-xl"></div>
+                                <div className="w-full md:w-1/2 aspect-video bg-[#F5F5F3] rounded-xl overflow-hidden relative border border-gray-100 shadow-sm">
+                                    <Image src={one} alt="Scannability" fill className="object-cover" />
+                                </div>
                                 <div className="w-full md:w-1/2">
                                     <h3 className="text-xl font-medium text-[#222224] mb-3">Scannability</h3>
-                                    <p className="text-[#6B6B6B] leading-relaxed">Users can quickly browse through high-level details before diving deep. The information architecture prioritizes role, visuals, and outcomes.</p>
+                                    <p className="text-[#6B6B6B] leading-relaxed">Visitors can quickly skim employee cards, understand roles at a glance, and choose which profiles to explore further.</p>
                                 </div>
                             </div>
 
                             <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
-                                <div className="w-full md:w-1/2 aspect-video bg-[#F5F5F3] rounded-xl"></div>
+                                <div className="w-full md:w-1/2 aspect-video bg-[#F5F5F3] rounded-xl overflow-hidden relative border border-gray-100 shadow-sm">
+                                    <Image src={two} alt="Scalability" fill className="object-cover" />
+                                </div>
                                 <div className="w-full md:w-1/2">
                                     <h3 className="text-xl font-medium text-[#222224] mb-3">Scalability</h3>
-                                    <p className="text-[#6B6B6B] leading-relaxed">As new work is added, the grid system adapts seamlessly, ensuring the portfolio grows without breaking the visual rhythm.</p>
+                                    <p className="text-[#6B6B6B] leading-relaxed">The grid system and category structure are designed to grow effortlessly as new employees join—without breaking visual rhythm or usability.</p>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-col md:flex-row gap-8 items-center">
+
+                                <div className="w-full md:w-1/2">
+                                    <h3 className="text-xl font-medium text-[#222224] mb-3">Professional Presentation</h3>
+                                    <p className="text-[#6B6B6B] leading-relaxed">The experience reinforces ClockHash’s credibility by presenting people with the same care and polish as products.</p>
                                 </div>
                             </div>
                         </div>
@@ -185,36 +238,10 @@ export default function PortfolioCaseStudy() {
                         <h2 className="text-2xl md:text-3xl font-medium text-[#222224] mb-12">Visual Exploration</h2>
 
                         <div className="space-y-8">
-                            {/* Full width */}
-                            <div className="w-full aspect-video bg-gray-100 rounded-xl flex items-center justify-center">
-                                <span className="text-gray-400 font-medium">Full Width Visual</span>
-                            </div>
-
-                            {/* Two columns */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div className="aspect-[4/5] bg-gray-100 rounded-xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Mobile View</span>
-                                </div>
-                                <div className="aspect-[4/5] bg-gray-100 rounded-xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Mobile Details</span>
-                                </div>
-                            </div>
-
-                            {/* Grid of 3 */}
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div className="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Detail 1</span>
-                                </div>
-                                <div className="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Detail 2</span>
-                                </div>
-                                <div className="aspect-square bg-gray-100 rounded-xl flex items-center justify-center">
-                                    <span className="text-gray-400 font-medium">Detail 3</span>
-                                </div>
-                            </div>
-                            {/* Another Full Width */}
-                            <div className="w-full aspect-[21/9] bg-gray-100 rounded-xl flex items-center justify-center">
-                                <span className="text-gray-400 font-medium">Wide Showcase</span>
+                            <p className="text-lg text-[#6B6B6B] mb-8">Full Width Layout • Category View • Individual Profile View • CV Download Interaction • Mobile Experience</p>
+                            {/* Wide Showcase */}
+                            <div className="w-full aspect-[21/9] bg-gray-100 rounded-xl overflow-hidden relative border border-gray-100">
+                                <Image src={three} alt="Wide Showcase" fill className="object-cover" />
                             </div>
                         </div>
                     </div>
@@ -223,8 +250,12 @@ export default function PortfolioCaseStudy() {
                     <div id="conclusion" className="scroll-mt-32 pb-24 text-center">
                         <div className="max-w-3xl mx-auto">
                             <h2 className="text-2xl md:text-3xl font-medium text-[#222224] mb-6">Built with Care</h2>
+                            <p className="text-lg text-[#6B6B6B] mb-8 leading-relaxed">
+                                Overall, the employee portfolio reflects how ClockHash approaches people, design, and engineering—structured, thoughtful, and built with intent.
+                                It transforms the team from a simple list of names into a discoverable, scalable, and professional showcase of talent.
+                            </p>
                             <p className="text-xl text-[#6B6B6B] leading-relaxed italic font-serif">
-                                "Overall, the portfolio page reflects how ClockHash approaches design and engineering—intentional, modern, and built with care."
+                                "Built with Care"
                             </p>
                         </div>
                     </div>
