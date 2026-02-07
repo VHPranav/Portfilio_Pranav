@@ -89,7 +89,7 @@ export function Navbar() {
 
                     {/* Contact */}
                     <Link
-                        href="#contact"
+                        href="/contact"
                         className="px-5 py-2 text-[#444] hover:text-black font-medium transition-colors rounded-full hover:bg-white/50"
                     >
                         Contact
