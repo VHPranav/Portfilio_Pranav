@@ -23,6 +23,8 @@ export const metadata: Metadata = {
   description: "Front-end developer and UI/UX Designer",
 };
 
+import { Analytics } from "@vercel/analytics/react";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,6 +36,7 @@ export default function RootLayout({
         <Navbar />
         <GridLines />
         {children}
+        <Analytics />
       </body>
     </html>
   );
