@@ -12,7 +12,7 @@ export default function WhatIDo() {
 
                 {/* Section Title */}
                 <div className="mb-6">
-                    <AnimatedText className="text-4xl md:text-5xl lg:text-6xl font-normal mb-4">
+                    <AnimatedText className="text-4xl md:text-5xl lg:text-6xl font-normal mb-4 tracking-[-0.06em]">
                         <span className="text-[#BEBEBE]">From</span>{" "}
                         <span className="text-[#222224]">Design to Code</span>
                     </AnimatedText>

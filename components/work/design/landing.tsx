@@ -9,7 +9,7 @@ export default function DesignLanding() {
             <BirdBackground />
             <div className="max-w-[90rem] relative z-10">
                 <AnimatedText
-                    className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-[#222224] mb-4 leading-[0.9]"
+                    className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-[#222224] mb-4 leading-[0.9] tracking-[-0.06em]"
                     delay={0.1}
                 >
                     Design guided by <br className="hidden md:block" /><span className="text-[#CFCFCF]">intent, not trends.</span>

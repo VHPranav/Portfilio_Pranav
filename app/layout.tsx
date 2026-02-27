@@ -18,6 +18,7 @@ const caveat = Caveat({
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vhpranav.com"),
   title: "V H Pranav",
   description: "Front-end developer and UI/UX Designer",
 };

@@ -21,7 +21,7 @@ export default function Home() {
     return (
         <main className="relative min-h-screen w-full overflow-hidden flex items-center">
             {/* Background Animation */}
-            <div className="absolute inset-0 z-0 pointer-events-none opacity-100">
+            {/* <div className="absolute inset-0 z-0 pointer-events-none opacity-100">
                 <Antigravity
                     count={300}
                     magnetRadius={15}
@@ -39,7 +39,7 @@ export default function Home() {
                     particleShape="capsule"
                     fieldStrength={10}
                 />
-            </div>
+            </div> */}
 
             {/* Gradient Blur Effect */}
             <div className="absolute -top-40 -left-40 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-gradient-to-br from-[#00E5FF] via-[#2979FF] to-[#AA00FF] opacity-30 blur-[100px] md:blur-[150px] z-0 rounded-full pointer-events-none" />
@@ -65,14 +65,14 @@ export default function Home() {
                 {/* Main Headline */}
                 <div className="flex flex-col gap-4">
                     <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-                        <span className="text-6xl md:text-[100px] font-semibold text-[#222224] leading-[0.9]">
+                        <span className="text-6xl md:text-[100px] font-semibold text-[#222224] leading-[0.9] tracking-[-0.06em]">
                             You need a
                         </span>
-                        <span className="relative text-6xl md:text-[100px] font-semibold text-[#222224] leading-[0.9]">
+                        <span className="relative text-6xl md:text-[100px] font-semibold text-[#222224] leading-[0.9] tracking-[-0.06em]">
                             <span className="relative z-10 ">creative</span>
                             <div className="absolute inset-x-0 bottom-2 md:bottom-6 h-8 md:h-12 bg-[yellow] -z-10 rotate-1"></div>
                         </span>
-                        <span className="relative text-6xl md:text-[100px] font-semibold text-[#222224] leading-[0.9]">
+                        <span className="relative text-6xl md:text-[100px] font-semibold text-[#222224] leading-[0.9] tracking-[-0.06em]">
                             <span className="relative z-10 "> product engineer</span>
                         </span>
                     </div>

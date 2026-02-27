@@ -29,7 +29,7 @@ export default function CTA() {
             <div className="max-w-5xl mx-auto flex flex-col items-center justify-center text-center relative z-10">
                 <TextAnimate
                     as="h2"
-                    className="text-6xl md:text-[80px] font-semibold text-[#222224] tracking-tight mb-4"
+                    className="text-6xl md:text-[80px] font-semibold text-[#222224] tracking-tight mb-4 tracking-[-0.06em]"
                     animation="blurInUp"
                 >
                     Have a project in mind? Let’s build something great.

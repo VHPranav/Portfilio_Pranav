@@ -123,7 +123,7 @@ export default function Tools() {
                     <TextAnimate className="text-[#6B6B6B] text-base ">
                         focused, modern tools for thoughtful product creation.
                     </TextAnimate>
-                    <TextAnimate className="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight"
+                    <TextAnimate className="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-[-0.06em]"
                         animation="blurInUp"
                         as="h2"
                         by="word"

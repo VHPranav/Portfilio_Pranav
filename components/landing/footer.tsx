@@ -27,7 +27,7 @@ export default function Footer() {
                     <Link href="https://twitter.com/vhpranav" target="_blank" className="text-[#A19E9E] hover:text-black transition-colors text-xl">
                         <SiX />
                     </Link>
-                    <Link href="mailto:vhpranav@example.com" className="text-[#A19E9E] hover:text-[#EA4335] transition-colors text-2xl">
+                    <Link href="mailto:pranavvh778@gmail.com" className="text-[#A19E9E] hover:text-[#EA4335] transition-colors text-2xl">
                         <HiMail />
                     </Link>
                 </div>

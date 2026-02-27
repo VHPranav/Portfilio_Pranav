@@ -51,7 +51,7 @@ export default function Workflow() {
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-6">
-                    <AnimatedText className="text-5xl md:text-6xl font-medium mb-2">
+                    <AnimatedText className="text-5xl md:text-6xl font-medium mb-2 tracking-[-0.06em]">
                         <span className="text-[#9B9B9B]">Design → Code</span>{" "}
                         <span className="font-medium text-[#222224]">Workflow</span>
                     </AnimatedText>

@@ -36,10 +36,9 @@ export default function Latest() {
         <section ref={containerRef} className="min-h-screen w-full bg-[#FCFBF8] px-6 py-20 md:px-12 lg:px-20">
             <div className="w-full max-w-6xl mx-auto">
 
-                {/* Section Title */}
-                <div className="mb-14 flex justify-center items-center">
+                <div className="mb-10 md:mb-14 flex justify-center items-center">
                     <div className="max-w-4xl text-center">
-                        <AnimatedText className="text-4xl md:text-[54px] lg:text-[54px] font-normal leading-tight text-[#CFCFCF]" delay={0} staggerDelay={0.08}>
+                        <AnimatedText className="text-3xl md:text-[54px] lg:text-[54px] font-normal leading-tight text-[#CFCFCF] tracking-[-0.06em]" delay={0} staggerDelay={0.08}>
                             UX engineer <span className="text-[#222224]">crafting purposeful digital experiences</span>
                         </AnimatedText>
                     </div>
@@ -92,7 +91,7 @@ function ProjectCard({ project, index, total }: { project: any, index: number, t
     return (
         <div
             ref={cardRef}
-            className="sticky top-24 w-full h-auto min-h-[500px] mb-12"
+            className="sticky top-20 md:top-24 w-full h-auto min-h-[400px] md:min-h-[500px] mb-8 md:mb-12"
             style={{
                 zIndex: index + 1,
             }}
@@ -102,39 +101,39 @@ function ProjectCard({ project, index, total }: { project: any, index: number, t
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="w-full bg-white rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] flex flex-col md:flex-row items-center p-8 md:p-10 gap-12"
+                className="w-full bg-white rounded-[2rem] md:rounded-[4rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)] flex flex-col md:flex-row items-center p-6 md:p-10 gap-8 md:gap-12"
             >
                 {/* Left: Text Content */}
-                <div className="flex-1 flex flex-col justify-center items-start">
+                <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4 md:mb-6">
                         {project.tags.map((tag: string, i: number) => (
                             <span
                                 key={i}
-                                className="px-4 py-1.5 bg-[#F5F5F7] text-[#666666] rounded-full text-xs md:text-sm font-medium border border-[#EEEEEE]"
+                                className="px-3 py-1 md:px-4 md:py-1.5 bg-[#F5F5F7] text-[#666666] rounded-full text-[10px] md:text-sm font-medium border border-[#EEEEEE]"
                             >
                                 {tag}
                             </span>
                         ))}
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl font-normal mb-6 text-[#222224] leading-tight">
+                    <h2 className="text-2xl md:text-4xl font-normal mb-4 md:mb-6 text-[#222224] leading-tight tracking-[-0.06em]">
                         {project.title}
                     </h2>
-                    <p className="text-[#666666] text-base md:text-lg font-light leading-relaxed mb-10 max-w-lg">
+                    <p className="text-[#666666] text-sm md:text-lg font-light leading-relaxed mb-6 md:mb-10 max-w-lg">
                         {project.description}
                     </p>
                     <Link
                         href={project.link}
-                        className="px-8 py-4 bg-[#1A1A1A] text-white rounded-full text-base font-medium hover:bg-black transition-colors"
+                        className="px-6 py-3 md:px-8 md:py-4 bg-[#1A1A1A] text-white rounded-full text-sm md:text-base font-medium hover:bg-black transition-colors"
                     >
                         View case study
                     </Link>
                 </div>
 
                 {/* Right: Image Area */}
-                <div className="flex-1 w-full min-h-[300px] md:min-h-[450px] relative rounded-[2rem] overflow-hidden bg-gradient-to-br from-[#FFF9C4]/50 to-[#FFF176]">
-                    <div className="absolute top-20 w-[110%] h-[100%] rounded-[2rem] overflow-hidden transform rotate-2">
+                <div className="flex-1 w-full min-h-[250px] md:min-h-[450px] relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-gradient-to-br from-[#FFF9C4]/50 to-[#FFF176]">
+                    <div className="absolute top-12 md:top-20 w-[110%] h-[100%] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden transform rotate-2">
                         <Image
                             src={project.image}
                             alt={project.title}
