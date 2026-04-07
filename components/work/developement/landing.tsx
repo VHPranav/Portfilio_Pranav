@@ -7,9 +7,9 @@ export default function DevelopmentLanding() {
     return (
         <section className="min-h-screen w-full flex flex-col justify-center px-6 md:px-12 lg:px-20 relative overflow-hidden">
             <BirdBackground />
-            <div className="max-w-[90rem] relative z-10">
+            <div className="max-w-[80rem] relative z-10">
                 <AnimatedText
-                    className="text-5xl md:text-7xl lg:text-8xl font-medium  text-[#222224] mb-4 leading-[0.9] tracking-[-0.06em]"
+                    className="text-5xl md:text-7xl lg:text-8xl font-medium text-[#222224] mb-4 leading-[0.9] tracking-[-0.06em]"
                     delay={0.1}
                 >
                     Code built for <br className="hidden md:block" />
