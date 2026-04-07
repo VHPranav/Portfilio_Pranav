@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
 import { ScrollDropBackground } from "@/components/ui/scroll-drop-background";
+import { ImageZoom } from "@/components/ui/image-zoom";
 import alpha from "../../public/images/webp/alphdash.webp"
 import one from "../../public/images/alpha/dashone.webp"
 import two from "../../public/images/alpha/dashtwo.webp"
@@ -14,7 +15,6 @@ import four from "../../public/images/alpha/dashfour.webp"
 import five from "../../public/images/alpha/dashfive.webp"
 import six from "../../public/images/alpha/dashsix.webp"
 import seven from "../../public/images/alpha/dashseven.webp"
-import Image from "next/image";
 
 export default function AlphaInterfaceCaseStudy() {
     const [activeSection, setActiveSection] = useState("overview");
@@ -116,10 +116,9 @@ export default function AlphaInterfaceCaseStudy() {
                             </div>
                         </div>
 
-                        {/* Large Hero Image Placeholder */}
                         {/* Large Hero Image */}
                         <div className="w-full aspect-[16/9] bg-[#F0F0F0] rounded-lg mb-12 overflow-hidden relative border border-gray-100 shadow-sm">
-                            <Image src={alpha} alt="Dashboard Hero Shot" fill className="object-cover" />
+                            <ImageZoom src={alpha} alt="Dashboard Hero Shot" fill />
                         </div>
 
                         <div className="space-y-6 text-lg text-[#555] leading-relaxed max-w-3xl">
@@ -224,7 +223,7 @@ export default function AlphaInterfaceCaseStudy() {
                                 </div>
                                 <p className="text-[#6B6B6B] max-w-2xl mb-6 pl-14">I redefined the dashboard hierarchy so each section serves a single purpose: Overview (pipeline health), Candidates (profiles/evaluations), Automation (workflows), AI Assistants, and Insights.</p>
                                 <div className="pl-14 w-full aspect-[3/1] bg-[#F0F0F0] rounded overflow-hidden relative text-gray-400 text-sm">
-                                    <Image src={one} alt="IA / Sitemap Diagram" fill className="object-cover" />
+                                    <ImageZoom src={one} alt="IA / Sitemap Diagram" fill />
                                 </div>
                             </div>
 
@@ -244,10 +243,10 @@ export default function AlphaInterfaceCaseStudy() {
                                 <p className="text-[#6B6B6B] max-w-2xl mb-6 pl-14">The visual system uses a calm, neutral palette to reduce cognitive strain. Subtle animations reinforce cause-and-effect, especially when AI actions are triggered—helping users build trust.</p>
                                 <div className="pl-14 grid grid-cols-2 gap-4">
                                     <div className="aspect-square bg-[#F9F9F9] rounded border border-gray-100 overflow-hidden relative">
-                                        <Image src={three} alt="Visual System 1" fill className="object-cover" />
+                                        <ImageZoom src={three} alt="Visual System 1" fill />
                                     </div>
                                     <div className="aspect-square bg-[#F9F9F9] rounded border border-gray-100 overflow-hidden relative">
-                                        <Image src={four} alt="Visual System 2" fill className="object-cover" />
+                                        <ImageZoom src={four} alt="Visual System 2" fill />
                                     </div>
                                 </div>
                             </div>
@@ -265,13 +264,13 @@ export default function AlphaInterfaceCaseStudy() {
                                     <p className="text-[#6B6B6B] text-sm leading-relaxed">Key hiring metrics and pipeline status are surfaced first. Users can understand recruitment health within seconds without diving into details.</p>
                                 </div>
                                 <div className="order-1 md:order-2 aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden relative">
-                                    <Image src={five} alt="Focused Dashboard Overview" fill className="object-cover" />
+                                    <ImageZoom src={five} alt="Focused Dashboard Overview" fill />
                                 </div>
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                                 <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden relative">
-                                    <Image src={six} alt="Agent-Centric Navigation" fill className="object-cover" />
+                                    <ImageZoom src={six} alt="Agent-Centric Navigation" fill />
                                 </div>
                                 <div className="bg-white p-8 rounded-xl shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-gray-100">
                                     <h3 className="text-lg font-medium text-[#222224] mb-3">AI-Assisted, Candidate-Centric Navigation</h3>
@@ -285,7 +284,7 @@ export default function AlphaInterfaceCaseStudy() {
                                     <p className="text-[#6B6B6B]">The layout anticipates growing hiring volume, multiple roles, and future AI capabilities—without overwhelming the user.</p>
                                 </div>
                                 <div className="w-full aspect-[21/9] bg-gray-100 rounded-xl overflow-hidden relative">
-                                    <Image src={seven} alt="Built for Scale" fill className="object-cover" />
+                                    <ImageZoom src={seven} alt="Built for Scale" fill />
                                 </div>
                             </div>
                         </div>

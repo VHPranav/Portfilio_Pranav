@@ -6,7 +6,7 @@ import { ScrollDropBackground } from "@/components/ui/scroll-drop-background";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
-import Image from "next/image";
+import { ImageZoom } from "@/components/ui/image-zoom";
 import one from "../../public/images/webp/towerone.webp"
 import two from "../../public/images/webp/twrwtch.webp"
 
@@ -116,7 +116,7 @@ export default function TowerWatchCaseStudy() {
 
                         {/* Large Hero Image Placeholder */}
                         <div className="w-full aspect-video bg-gray-200 rounded-2xl mb-12 flex items-center justify-center">
-                            <Image src={two} alt="TowerWatch Hero Image" className="w-full aspect-video rounded-2xl" />
+                            <ImageZoom src={two} alt="TowerWatch Hero Image" fill />
                         </div>
 
                         <div className="space-y-6 text-lg text-[#6B6B6B] leading-relaxed max-w-4xl">
@@ -165,7 +165,7 @@ export default function TowerWatchCaseStudy() {
                         <div className="space-y-16">
                             <div className="flex flex-col md:flex-row gap-12 items-center">
                                 <div className="w-full md:w-1/2 aspect-[4/3] bg-[#F5F5F3] rounded-xl flex items-center justify-center text-gray-400">
-                                    <Image src={one} alt="TowerWatch Hero Image" className="w-full aspect-video rounded-2xl" />
+                                    <ImageZoom src={one} alt="TowerWatch Feature Image" fill />
                                 </div>
                                 <div className="w-full md:w-1/2">
                                     <h3 className="text-xl font-medium text-[#222224] mb-4">Contextual Energy Data</h3>

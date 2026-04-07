@@ -93,6 +93,18 @@ export default function Home() {
                         </span> */}
                         a Creative Front-End Developer & UI/UX Designer. I build clean, high-performance interfaces where motion and engineering come together, turning ideas into scalable, production-ready experiences.
                     </AnimatedText>
+
+                    <AnimatedText delay={0.6} className="mt-8">
+                        <a
+                            href="/Pranav_Resume.pdf"
+                            download="Pranav_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-8 py-4 bg-[#222224] text-white rounded-full font-medium text-lg hover:scale-105 active:scale-95 transition-transform shadow-lg"
+                        >
+                            Download Resume
+                        </a>
+                    </AnimatedText>
                 </div>
 
                 {/* <div className="flex flex-col gap-4">

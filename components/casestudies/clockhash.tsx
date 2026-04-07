@@ -6,16 +6,16 @@ import { ScrollDropBackground } from "@/components/ui/scroll-drop-background";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
-import Image from "next/image";
-import one from "../../public/images/clck/one.webp"
-import two from "../../public/images/clck/two.webp"
-import three from "../../public/images/clck/three.webp"
-import four from "../../public/images/clck/four.webp"
-import five from "../../public/images/clck/five.webp"
-import six from "../../public/images/clck/six.webp"
-import seven from "../../public/images/clck/seven.webp"
-import eight from "../../public/images/clck/eight.webp"
-import nine from "../../public/images/clck/nine.webp"
+import { ImageZoom } from "@/components/ui/image-zoom";
+import one from "../../public/images/clck/one.png"
+import two from "../../public/images/clck/two.png"
+import three from "../../public/images/clck/three.png"
+import four from "../../public/images/clck/four.png"
+import five from "../../public/images/clck/five.png"
+import six from "../../public/images/clck/six.png"
+import seven from "../../public/images/clck/seven.png"
+import eight from "../../public/images/clck/eight.png"
+import nine from "../../public/images/clck/nine.png"
 
 export default function ClockHashCaseStudy() {
     const [activeSection, setActiveSection] = useState("overview");
@@ -118,10 +118,9 @@ export default function ClockHashCaseStudy() {
                             </div>
                         </div>
 
-                        {/* Large Hero Image Placeholder */}
                         {/* Large Hero Image */}
                         <div className="w-full aspect-video bg-gray-200 rounded-2xl mb-12 overflow-hidden relative">
-                            <Image src={six} alt="ClockHash Hero" fill className="object-fill" />
+                            <ImageZoom src={seven} alt="ClockHash Hero" fill />
                         </div>
 
                         <div className="space-y-6 text-lg text-[#6B6B6B] leading-relaxed max-w-4xl">
@@ -182,7 +181,7 @@ export default function ClockHashCaseStudy() {
                         </div>
 
                         <div className="w-full aspect-[21/9] bg-gray-200 rounded-2xl overflow-hidden relative mt-12">
-                            <Image src={two} alt="Current Website Analysis" fill className="object-cover" />
+                            <ImageZoom src={two} alt="Current Website Analysis" fill />
                         </div>
                     </div>
 
@@ -253,7 +252,7 @@ export default function ClockHashCaseStudy() {
                                     <li>What information must appear above the fold</li>
                                 </ul>
                                 <div className="w-full aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden relative">
-                                    <Image src={three} alt="Sitemap" fill className="object-cover" />
+                                    <ImageZoom src={six} alt="Sitemap" fill />
                                 </div>
                             </div>
 
@@ -266,7 +265,7 @@ export default function ClockHashCaseStudy() {
                                     <li>How do we balance storytelling with clarity?</li>
                                 </ul>
                                 <div className="w-full aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden relative">
-                                    <Image src={four} alt="Wireframes" fill className="object-cover" />
+                                    <ImageZoom src={four} alt="Wireframes" fill />
                                 </div>
                             </div>
 
@@ -279,7 +278,7 @@ export default function ClockHashCaseStudy() {
                                     <li>Strong contrast and hierarchy</li>
                                 </ul>
                                 <div className="w-full aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden relative">
-                                    <Image src={five} alt="Style Guide" fill className="object-cover" />
+                                    <ImageZoom src={five} alt="Style Guide" fill />
                                 </div>
                             </div>
 
@@ -292,7 +291,7 @@ export default function ClockHashCaseStudy() {
                                     <li>Performance-friendly animations</li>
                                 </ul>
                                 <div className="w-full aspect-[4/3] bg-gray-200 rounded-xl overflow-hidden relative">
-                                    <Image src={one} alt="Implementation" fill className="object-cover" />
+                                    <ImageZoom src={one} alt="Implementation" fill />
                                 </div>
                             </div>
                         </div>
@@ -305,7 +304,7 @@ export default function ClockHashCaseStudy() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
                             <div className="order-2 md:order-1">
                                 <div className="w-full aspect-square bg-gray-200 rounded-2xl overflow-hidden relative">
-                                    <Image src={seven} alt="Hero Design" fill className="object-cover" />
+                                    <ImageZoom src={seven} alt="Hero Design" fill />
                                 </div>
                             </div>
                             <div className="order-1 md:order-2">
@@ -332,7 +331,7 @@ export default function ClockHashCaseStudy() {
                             </div>
                             <div>
                                 <div className="w-full aspect-square bg-gray-200 rounded-2xl overflow-hidden relative">
-                                    <Image src={eight} alt="Service UI" fill className="object-cover" />
+                                    <ImageZoom src={eight} alt="Service UI" fill />
                                 </div>
                             </div>
                         </div>
@@ -340,7 +339,7 @@ export default function ClockHashCaseStudy() {
                         <div className="mb-8">
                             <h3 className="text-xl font-medium text-[#222224] mb-8 text-center">Consistent Visual Language & Scalability</h3>
                             <div className="w-full aspect-[2/1] bg-gray-200 rounded-2xl overflow-hidden relative mb-8">
-                                <Image src={nine} alt="Design System" fill className="object-cover" />
+                                <ImageZoom src={nine} alt="Design System" fill />
                             </div>
                             <p className="text-center text-[#6B6B6B] max-w-2xl mx-auto">
                                 Typography, spacing, colors, and motion follow a unified system — reducing future design and development effort. The layout allows easy expansion into future products.

@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState, useRef, useEffect } from "react"
-import { IoChevronDown, IoMenu, IoClose, IoMail } from "react-icons/io5"
+import { IoChevronDown, IoMenu, IoClose, IoMail, IoDocumentText } from "react-icons/io5"
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa6"
 import { AnimatePresence, motion } from "framer-motion"
 
@@ -31,7 +31,7 @@ export function Navbar() {
             </Link>
 
             {/* Desktop Navbar */}
-            <nav className="hidden md:flex fixed top-6 right-0 -translate-x-1/2 z-50">
+            <nav className="hidden md:flex fixed top-6 right-6 md:right-40 z-50">
                 <div className="flex items-center gap-1 bg-[#F5F5F3]/60 backdrop-blur-md px-2 py-2 rounded-full border border-white/20 shadow-sm">
 
                     {/* About */}
@@ -95,6 +95,17 @@ export function Navbar() {
                         Contact
                     </Link>
 
+                    {/* Resume Download */}
+                    <a
+                        href="/Pranav_Resume.pdf"
+                        download="Pranav_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-5 py-2 bg-[#222224] text-white hover:bg-black font-medium transition-colors rounded-full ml-2 shadow-sm"
+                    >
+                        <IoDocumentText /> Resume
+                    </a>
+
                 </div>
             </nav>
 
@@ -157,6 +168,18 @@ export function Navbar() {
                             >
                                 Contact
                             </Link>
+
+                            <a
+                                href="/Pranav_Resume.pdf"
+                                download="Pranav_Resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="py-4 flex items-center justify-between border-b border-gray-200 text-[#222224]"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                <span>Download Resume</span>
+                                <IoDocumentText />
+                            </a>
                         </div>
 
                         {/* Social Media Links */}

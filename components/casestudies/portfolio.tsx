@@ -6,7 +6,7 @@ import { ScrollDropBackground } from "@/components/ui/scroll-drop-background";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
-import Image from "next/image";
+import { ImageZoom } from "@/components/ui/image-zoom";
 import prof from "../../public/images/portfolio/land.webp"
 import one from "../../public/images/portfolio/prof.webp"
 import two from "../../public/images/portfolio/team.webp"
@@ -125,7 +125,7 @@ export default function PortfolioCaseStudy() {
 
                         {/* Large Hero Image */}
                         <div className="w-full aspect-video bg-gray-200 rounded-2xl mb-12 overflow-hidden relative border border-gray-100 shadow-sm">
-                            <Image src={prof} alt="Portfolio Hero Shot" fill className="object-cover" />
+                            <ImageZoom src={prof} alt="Portfolio Hero Shot" fill />
                         </div>
 
                         <div className="space-y-6 text-lg text-[#6B6B6B] leading-relaxed max-w-4xl">
@@ -205,7 +205,7 @@ export default function PortfolioCaseStudy() {
                         <div className="space-y-16">
                             <div className="flex flex-col md:flex-row gap-8 items-center">
                                 <div className="w-full md:w-1/2 aspect-video bg-[#F5F5F3] rounded-xl overflow-hidden relative border border-gray-100 shadow-sm">
-                                    <Image src={one} alt="Scannability" fill className="object-cover" />
+                                    <ImageZoom src={one} alt="Scannability" fill />
                                 </div>
                                 <div className="w-full md:w-1/2">
                                     <h3 className="text-xl font-medium text-[#222224] mb-3">Scannability</h3>
@@ -215,7 +215,7 @@ export default function PortfolioCaseStudy() {
 
                             <div className="flex flex-col md:flex-row-reverse gap-8 items-center">
                                 <div className="w-full md:w-1/2 aspect-video bg-[#F5F5F3] rounded-xl overflow-hidden relative border border-gray-100 shadow-sm">
-                                    <Image src={two} alt="Scalability" fill className="object-cover" />
+                                    <ImageZoom src={two} alt="Scalability" fill />
                                 </div>
                                 <div className="w-full md:w-1/2">
                                     <h3 className="text-xl font-medium text-[#222224] mb-3">Scalability</h3>
@@ -241,7 +241,7 @@ export default function PortfolioCaseStudy() {
                             <p className="text-lg text-[#6B6B6B] mb-8">Full Width Layout • Category View • Individual Profile View • CV Download Interaction • Mobile Experience</p>
                             {/* Wide Showcase */}
                             <div className="w-full aspect-[21/9] bg-gray-100 rounded-xl overflow-hidden relative border border-gray-100">
-                                <Image src={three} alt="Wide Showcase" fill className="object-cover" />
+                                <ImageZoom src={three} alt="Wide Showcase" fill />
                             </div>
                         </div>
                     </div>

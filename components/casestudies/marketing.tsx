@@ -6,7 +6,7 @@ import { ScrollDropBackground } from "@/components/ui/scroll-drop-background";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoArrowBack } from "react-icons/io5";
-import Image from "next/image";
+import { ImageZoom } from "@/components/ui/image-zoom";
 import one from "@/public/images/market/landd.webp"
 import two from "@/public/images/market/offer.webp"
 import three from "@/public/images/market/circle.webp"
@@ -124,7 +124,7 @@ export default function MarketingCaseStudy() {
                         </div>
 
                         <div className="w-full aspect-video bg-gray-200 rounded-2xl mb-12 overflow-hidden relative border border-gray-100 shadow-sm">
-                            <Image src={one} alt="Marketing Hero Shot" fill className="object-cover" />
+                            <ImageZoom src={one} alt="Marketing Hero Shot" fill />
                         </div>
 
                         <div className="space-y-6 text-lg text-[#6B6B6B] leading-relaxed max-w-4xl">
@@ -176,14 +176,14 @@ export default function MarketingCaseStudy() {
                         <h2 className="text-2xl md:text-3xl font-medium text-[#222224] mb-12">Visual Sneak Peek</h2>
                         <div className="space-y-8">
                             <div className="w-full aspect-video bg-gray-100 rounded-2xl overflow-hidden relative border border-gray-100">
-                                <Image src={three} alt="Homepage Layout" fill className="object-cover" />
+                                <ImageZoom src={three} alt="Homepage Layout" fill />
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div className="aspect-square bg-gray-100 rounded-2xl overflow-hidden relative border border-gray-100">
-                                    <Image src={two} alt="Mobile Responsiveness" fill className="object-cover" />
+                                    <ImageZoom src={two} alt="Mobile Responsiveness" fill />
                                 </div>
                                 <div className="aspect-square bg-gray-100 rounded-2xl overflow-hidden relative border border-gray-100">
-                                    <Image src={four} alt="Service Cards Detail" fill className="object-cover" />
+                                    <ImageZoom src={four} alt="Service Cards Detail" fill />
                                 </div>
                             </div>
                         </div>
